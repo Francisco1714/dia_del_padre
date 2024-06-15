@@ -24,17 +24,20 @@ h1 {
     overflow: hidden;
     position: relative;
     background-color: white;
+    box-sizing: border-box;
 }
 
 .espuma {
     position: absolute;
-    top: 0;
+    bottom: 0;
     width: 100%;
-    height: 20px;
+    height: 0;
     background-color: #fff;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-image: radial-gradient(circle, #fff 10%, transparent 20%);
+    background-size: 20px 20px;
+    transition: height 2s, bottom 2s;
+    z-index: 2;
+    box-sizing: border-box;
 }
 
 .cerveza {
@@ -44,17 +47,20 @@ h1 {
     height: 0;
     background-color: #fbbd23;
     transition: height 2s;
+    z-index: 1;
+    box-sizing: border-box;
 }
 
 .oreja {
     position: absolute;
     top: 30px;
-    right: -30px;
+    right: -25px; /* Ajustado para que quede pegada a la jarra */
     width: 30px;
     height: 100px;
     border: 5px solid #d1a72e;
     border-radius: 0 20px 20px 0;
     background-color: white;
+    box-sizing: border-box;
 }
 
 button {
@@ -92,7 +98,7 @@ button:hover {
 
     .oreja {
         top: 24px;
-        right: -24px;
+        right: -28px;
         width: 24px;
         height: 80px;
     }
@@ -115,7 +121,7 @@ button:hover {
 
     .oreja {
         top: 18px;
-        right: -18px;
+        right: -22px;
         width: 18px;
         height: 60px;
     }
